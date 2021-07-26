@@ -29,7 +29,27 @@ const renderIcons = (icons, targetElement) => {
 targetElement.innerHTML = iconsTemplate;
 }
 
-// 3.Recuperiamo l'elemento HTML;
+// 4.Recuperiamo l'elemento HTML;
 const cardIcons = document.querySelector(".row");
-// 4. Chiamiamo la funzione;
+// 5. Chiamiamo la funzione;
 renderIcons(icons, cardIcons);
+
+// Recuperiamo Select
+const selectField = document.getElementById("filter") 
+
+selectField.addEventListener("change", () => {
+    const filterValue = selectField.value;
+
+    // controlliamo se ALL è selezionato
+    if(filterValue === `all`) {
+        renderIcons(icons, cardIcons);
+        return;
+    }
+
+    const filtered = icons.filter((icon) => filterValue === icon.type);
+    renderIcons(filtered, cardIcons);
+})
+
+
+
+
