@@ -16,9 +16,9 @@ const renderIcons = (icons, targetElement) => {
     // 3. Facciamo in modo che abbia anche l'Offset;
     const hasOffset = index % 5 === 0 ? `offset-md-1` : " ";
     iconsTemplate += `
-    <div class="col col-sm-4 col-md-2 ${hasOffset}">
+    <div class="col col-sm-4 col-md-2 fa-2x ${hasOffset}">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
                 <i class="${icon.family} ${icon.prefix}${icon.name}"></i>
                 <div class="h6">${icon.name.toUpperCase()}</div>
             </div>

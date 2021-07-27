@@ -1,13 +1,20 @@
+body {
+    background-color: rgb(221, 221, 221);
+}
+
 #bottom-nav {
     background-color: rgb(41, 177, 221);
 }
+
 
 #top-navbar a {
     color:  rgb(41, 177, 221);
     font-weight: 700;
 }
 
-.bg-grey {
-    background-color: rgb(221, 221, 221);
-}
 
+.card {
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 2px 2px rgba(0,0,0,0.2);
+}
